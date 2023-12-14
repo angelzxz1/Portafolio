@@ -62,10 +62,24 @@ const NavBar = () => {
                         <Menu />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                        <DropdownMenuItem>Profile</DropdownMenuItem>
-                        <DropdownMenuItem>Billing</DropdownMenuItem>
-                        <DropdownMenuItem>Team</DropdownMenuItem>
-                        <DropdownMenuItem>Subscription</DropdownMenuItem>
+                        {links.map((link) => {
+                            return (
+                                <DropdownMenuItem key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        key={link.label}
+                                        className={cn(
+                                            "text-white hover:text-yellow-200 transition-all",
+                                            pathname.startsWith(link.href)
+                                                ? ""
+                                                : "text-white/50"
+                                        )}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </DropdownMenuItem>
+                            );
+                        })}
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
