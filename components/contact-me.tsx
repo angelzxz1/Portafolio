@@ -67,7 +67,7 @@ const ContactMe = () => {
             <div className="w-full xl:w-[95%] flex items-center justify-center xl:h-full xl:p-28 gap-8">
                 <div className="rounded-lg xl:h-full xl:w-1/2 w-full flex flex-col justify-start gap-2">
                     <div className="w-full">
-                        <h2 className="font-thin text-6xl w-full border-b border-b-yellow-200 h-auto pb-4">
+                        <h2 className="font-thin text-6xl w-full border-b dark:border-yellow-200 border-yellow-500 h-auto pb-4 ">
                             Send me a message
                         </h2>
                     </div>
@@ -169,22 +169,22 @@ const ContactMe = () => {
                             </form>
                         </Form>
                         <div className="w-full">
-                            <h2 className="font-thin text-6xl w-full border-b border-b-yellow-200 h-auto pb-4">
+                            <h2 className="font-thin text-6xl w-full border-b dark:border-yellow-200 border-yellow-500 h-auto pb-4">
                                 Or contact me here
                             </h2>
                         </div>
                         <div className="w-full flex gap-4 flex-wrap">
-                            <div className="flex-1 flex gap-4">
-                                <Link href={"#"}>
+                            <div className="flex-1 flex gap-4 items-start upIcon">
+                                <Link href="https://www.instagram.com/angelzxz1">
                                     <FaInstagram size={30} />
                                 </Link>
                                 <Link href={"#"}>
                                     <FaXTwitter size={30} />
                                 </Link>
-                                <Link href={"#"}>
+                                <Link href={"www.linkedin.com/in/angelzxz1/"}>
                                     <FaLinkedinIn size={30} />
                                 </Link>
-                                <Link href={"#"}>
+                                <Link href={"https://github.com/angelzxz1"}>
                                     <FiGithub size={30} />
                                 </Link>
                             </div>

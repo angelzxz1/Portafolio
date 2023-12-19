@@ -10,6 +10,8 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
+import Image from "next/image";
+import { ModeToggle } from "./theme-toggle";
 
 const links = [
     { href: "#home", label: "Home" },
@@ -33,30 +35,38 @@ const NavBar = () => {
     return (
         <nav
             className={cn(
-                "flex justify-between py-1 px-12 transition-all fixed top-0 w-full z-50 bg-transparent backdrop-blur-md border-white/20",
-                isScrolled ? "xl:py-4 border-b" : "xl:py-12"
+                "flex justify-between items-center py-1 px-12 transition-all fixed top-0 w-full z-50 bg-transparent backdrop-blur-md dark:border-white/20 min-h-[4rem] border-black/20",
+                isScrolled ? "xl:py-2 border-b " : "xl:py-12 xl"
             )}
         >
-            <div className="">Logo</div>
-            <div className="hidden lg:flex gap-24 pr-8">
+            <div className="h-full flex relative items-center justify-start w-full">
+                <Image
+                    src={"/mgn_logo.png"}
+                    alt={"logo"}
+                    width={!isScrolled ? 60 : 45}
+                    height={50}
+                    className="transition-all"
+                />
+            </div>
+
+            <div className="hidden lg:flex gap-24 pr-8 items-center">
                 {links.map((link) => {
                     return (
                         <Link
                             href={link.href}
                             key={link.label}
                             className={cn(
-                                "text-white hover:text-yellow-200 transition-all",
-                                pathname.startsWith(link.href)
-                                    ? ""
-                                    : "text-white/50"
+                                "dark:text-white/50 text-black dark:hover:text-yellow-200 hover:text-yellow-500 transition-all"
                             )}
                         >
                             {link.label}
                         </Link>
                     );
                 })}
+                <ModeToggle />
             </div>
-            <div className="lg:hidden">
+
+            <div className="lg:hidden flex gap-4">
                 <DropdownMenu>
                     <DropdownMenuTrigger>
                         <Menu />
@@ -69,10 +79,7 @@ const NavBar = () => {
                                         href={link.href}
                                         key={link.label}
                                         className={cn(
-                                            "text-white hover:text-yellow-200 transition-all",
-                                            pathname.startsWith(link.href)
-                                                ? ""
-                                                : "text-white/50"
+                                            "dark:text-white/50 text-black hover:text-yellow-200 transition-all"
                                         )}
                                     >
                                         {link.label}
@@ -82,6 +89,7 @@ const NavBar = () => {
                         })}
                     </DropdownMenuContent>
                 </DropdownMenu>
+                <ModeToggle />
             </div>
         </nav>
     );

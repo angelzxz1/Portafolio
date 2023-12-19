@@ -98,3 +98,7 @@ body,
   box-shadow: inset -3px 3px 0px 0px #000000;
   translate: -2px 2px;
 }
+
+.upIcon>:hover{
+  transform: translateY(-2px);
+}

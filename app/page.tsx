@@ -26,8 +26,11 @@ const Lines = () => {
     const Lines = [0, 1, 2, 3, 4, 5, 6, 7];
     return (
         <div className="hidden xl:flex flex-col justify-evenly items-center flex-1">
-            <Separator orientation="vertical" className="h-1/3 bg-white" />
-            <div className="border border-yellow-200 h-8 w-8 rounded-full flex items-center justify-center relative">
+            <Separator
+                orientation="vertical"
+                className="h-1/3 dark:bg-white bg-black"
+            />
+            <div className="border dark:border-yellow-200 border-yellow-500 h-8 w-8 rounded-full flex items-center justify-center relative">
                 <div className=" animate-[spin_5s_linear_infinite] h-full w-full flex items-center justify-center absolute">
                     {Lines.map((line) => (
                         <div
@@ -39,7 +42,7 @@ const Lines = () => {
                         >
                             <div
                                 className={cn(
-                                    "h-px bg-white absolute left-full ml-4",
+                                    "h-px dark:bg-white bg-black absolute left-full ml-4",
                                     line % 2 === 0 && "w-1/4 "
                                 )}
                             ></div>
@@ -57,7 +60,7 @@ const Lines = () => {
                         >
                             <div
                                 className={cn(
-                                    "h-px bg-white absolute left-full ml-4",
+                                    "h-px dark:bg-white bg-black absolute left-full ml-4",
                                     line % 2 !== 0 && "w-1/3 "
                                 )}
                             ></div>
@@ -65,7 +68,10 @@ const Lines = () => {
                     ))}
                 </div>
             </div>
-            <Separator orientation="vertical" className="h-1/3 bg-white" />
+            <Separator
+                orientation="vertical"
+                className="h-1/3 dark:bg-white bg-black"
+            />
         </div>
     );
 };
@@ -107,34 +113,36 @@ export default function Home() {
                             </div>
 
                             <div className="flex items-center gap-2 text-">
-                                <h2 className="font-thin text-2xl leading-none text-white/50">
+                                <h2 className="font-thin text-2xl leading-none dark:text-white/50 text-black">
                                     Full Stack Developer
                                 </h2>
-                                <Code2 className="w-6 h-6 text-white/50" />
-                                <Separator className=" bg-white/30 flex-1 mt-[2px]" />
+                                <Code2 className="w-6 h-6 dark:text-white/50 text-black/30" />
+                                <Separator className=" dark:bg-white/30 bg-black/30 flex-1 mt-[2px]" />
                             </div>
                             <div className="flex items-center gap-2 text-">
-                                <h3 className="font-thin text-xl leading-none text-white/50">
+                                <h3 className="font-thin text-xl leading-none dark:text-white/50 text-black">
                                     Barranquilla, Colombia
                                 </h3>
-                                <MapPin className="w-6 h-6 text-white/50" />
-                                <Separator className=" bg-white/30 flex-1 mt-[2px]" />
+                                <MapPin className="w-6 h-6 dark:text-white/50 text-black/30" />
+                                <Separator className=" dark:bg-white/30 bg-black/30 flex-1 mt-[2px]" />
                             </div>
 
-                            <div className="border border-yellow-200 h-12 w-full rounded-full flex items-center justify-center">
+                            <div className="border dark:border-yellow-200 border-yellow-500 h-12 w-full rounded-full flex items-center justify-center">
                                 <User strokeWidth={1} className="mr-4" />
                                 About me
                             </div>
-                            <div className="flex flex-wrap gap-4">
-                                <p className="font-thin text-xl leading-none text-white/50">
+                            <div className="flex flex-wrap gap-4 dark:text-white/50 text-black ">
+                                <p className="font-thin text-xl leading-none ">
                                     I am a full stack developer with experience
                                     in web and mobile development. I am
                                     passionate about creating solutions to
                                     problems and learning new technologies.
                                 </p>
-                                <p className="font-thin text-xl leading-none text-white/50">
-                                    This is the stack that I use:
-                                </p>
+                                <div className="font-thin text-xl leading-none bg-black/10 dark:bg-transparent w-full dark:-skew-x-0 -skew-x-[20deg] py-1 px-4">
+                                    <p className="dark:skew-x-0 skew-x-[20deg]">
+                                        This is the stack that I use:
+                                    </p>
+                                </div>
                             </div>
                             <div className="flex xl:justify-between gap-4 flex-wrap">
                                 <ul>
@@ -176,60 +184,60 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="w-full xl:flex-1 h-full flex flex-col gap-6">
-                            <div className="border border-yellow-200 h-12 w-full gap-4 rounded-full flex items-center justify-center">
+                            <div className="border dark:border-yellow-200 border-yellow-500 h-12 w-full gap-4 rounded-full flex items-center justify-center">
                                 <Briefcase strokeWidth={1} /> Work Experience
                             </div>
                             <div className="flex flex-col gap-4">
                                 <div className="flex gap-4">
-                                    <div className="flex-1 flex flex-col gap-2">
-                                        <h3 className="font-thin text-xl leading-none text-white/50">
+                                    <div className="flex-1 flex flex-col gap-2 dark:text-white/50 text-black">
+                                        <h3 className="font-thin text-xl leading-none ">
                                             Web developer
                                         </h3>
-                                        <h4 className="font-thin text-lg leading-none text-white/50">
+                                        <h4 className="font-thin text-lg leading-none ">
                                             OF Digital
                                         </h4>
-                                        <p className="font-thin text-lg leading-none text-white/50">
+                                        <p className="font-thin text-lg leading-none ">
                                             2018 - 2019
                                         </p>
                                     </div>
                                     <Separator
                                         orientation="vertical"
-                                        className="bg-white/50"
+                                        className="dark:bg-white/30 bg-black/30"
                                     />
-                                    <div className="flex-1 flex flex-col gap-2">
-                                        <h3 className="font-thin text-xl leading-none text-white/50">
+                                    <div className="flex-1 flex flex-col gap-2 dark:text-white/50 text-black">
+                                        <h3 className="font-thin text-xl leading-none ">
                                             Lead team developer
                                         </h3>
-                                        <h4 className="font-thin text-lg leading-none text-white/50">
+                                        <h4 className="font-thin text-lg leading-none ">
                                             OF Digital
                                         </h4>
-                                        <p className="font-thin text-lg leading-none text-white/50">
+                                        <p className="font-thin text-lg leading-none ">
                                             2019 - 2019
                                         </p>
                                     </div>
                                 </div>
-                                <Separator className="bg-white/50" />
+                                <Separator className="dark:bg-white/30 bg-black/30" />
                                 <div className="flex gap-4">
-                                    <div className="flex-1 flex flex-col gap-2">
-                                        <h3 className="font-thin text-xl leading-none text-white/50">
+                                    <div className="flex-1 flex flex-col gap-2 dark:text-white/50 text-black">
+                                        <h3 className="font-thin text-xl leading-none ">
                                             Full Stack Developer
                                         </h3>
-                                        <h4 className="font-thin text-lg leading-none text-white/50">
+                                        <h4 className="font-thin text-lg leading-none ">
                                             Freelance
                                         </h4>
-                                        <p className="font-thin text-lg leading-none text-white/50">
+                                        <p className="font-thin text-lg leading-none ">
                                             2022 - Present
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="border border-yellow-200 h-12 w-full gap-4 rounded-full flex items-center justify-center">
+                            <div className="border dark:border-yellow-200 border-yellow-500 h-12 w-full gap-4 rounded-full flex items-center justify-center">
                                 <ClipboardList strokeWidth={1} /> Projects
                             </div>
-                            <div className="grid xl:grid-rows-2 xl:grid-cols-2 grid-rows-3 grid-cols-1 gap-4">
-                                <div className="flex-1 flex flex-col gap-2 xl:col-start-1 xl:col-end-1 xl:row-start-1 xl:row-end-1 row-span-1">
+                            <div className="grid xl:grid-rows-2 xl:grid-cols-2 grid-rows-3 grid-cols-1 gap-4 ">
+                                <div className="flex-1 flex flex-col gap-2 xl:col-start-1 xl:col-end-1 xl:row-start-1 xl:row-end-1 row-span-1 ">
                                     <div className="flex gap-3 items-center">
-                                        <h3 className="font-thin text-2xl leading-none text-white/80">
+                                        <h3 className="font-thin text-2xl leading-none dark:text-white/80 text-black">
                                             Magic builder
                                         </h3>
                                         <Link href={""} target="_blank">
@@ -237,7 +245,7 @@ export default function Home() {
                                         </Link>
                                     </div>
 
-                                    <p className="font-thin text-lg leading-none text-white/50">
+                                    <p className="font-thin text-lg leading-none dark:text-white/50 text-black">
                                         A magic the gathering deck builder app
                                         using the Scryfall API.
                                     </p>
@@ -251,7 +259,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2 xl:col-start-2 xl:col-end-2 xl:row-start-1 xl:row-end-1 row-span-1">
                                     <div className="flex gap-3 items-center">
-                                        <h3 className="font-thin text-2xl leading-none text-white/80">
+                                        <h3 className="font-thin text-2xl leading-none dark:text-white/80 text-black">
                                             Finaz
                                         </h3>
                                         <Link href={""} target="_blank">
@@ -259,7 +267,7 @@ export default function Home() {
                                         </Link>
                                     </div>
 
-                                    <p className="font-thin text-lg leading-none text-white/50">
+                                    <p className="font-thin text-lg leading-none dark:text-white/50 text-black">
                                         A personal finance app to trach your
                                         records of income and expenses.
                                     </p>
@@ -273,7 +281,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex-1 flex flex-col gap-2 xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-2 row-span-1">
                                     <div className="flex gap-3 items-center">
-                                        <h3 className="font-thin text-2xl leading-none text-white/80">
+                                        <h3 className="font-thin text-2xl leading-none dark:text-white/80 text-black">
                                             How to adult?
                                         </h3>
                                         <Link href={""} target="_blank">
@@ -281,7 +289,7 @@ export default function Home() {
                                         </Link>
                                     </div>
 
-                                    <p className="font-thin text-lg leading-none text-white/50">
+                                    <p className="font-thin text-lg leading-none dark:text-white/50 text-black">
                                         A web app to help young people to learn
                                         about things that are not normally
                                         taught in highschool.
