@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
 import Image from "next/image";
-import { ModeToggle } from "./theme-toggle";
+// import { ModeToggle } from "./theme-toggle";
 
 const links = [
     { href: "#home", label: "Home" },
@@ -89,7 +89,7 @@ const NavBar = () => {
                         })}
                     </DropdownMenuContent>
                 </DropdownMenu>
-                <ModeToggle />
+                {/* <ModeToggle /> */}
             </div>
         </nav>
     );
