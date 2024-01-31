@@ -63,7 +63,7 @@ const NavBar = () => {
                         </Link>
                     );
                 })}
-                <ModeToggle />
+                {/* <ModeToggle /> */}
             </div>
 
             <div className="lg:hidden flex gap-4">
