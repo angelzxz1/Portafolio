@@ -282,9 +282,14 @@ export default function Home() {
                                 <div className="flex-1 flex flex-col gap-2 xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-2 row-span-1">
                                     <div className="flex gap-3 items-center">
                                         <h3 className="font-thin text-2xl leading-none dark:text-white/80 text-black">
-                                            How to adult?
+                                            Tips n that
                                         </h3>
-                                        <Link href={""} target="_blank">
+                                        <Link
+                                            href={
+                                                "https://tips-n-that.magenz.dev/"
+                                            }
+                                            target="_blank"
+                                        >
                                             <ExternalLink strokeWidth={1} />
                                         </Link>
                                     </div>
